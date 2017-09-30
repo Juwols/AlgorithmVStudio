@@ -60,7 +60,7 @@ namespace utility {
 			void createTree(int* arr, int size, bool(*leftAddPredicate)(int newValue, int nodeValue));
 			Node* addNode(int * arr, int size, int index);
 			Node* getNextToSwap(Node* node);
-			Node* getParentOf(Node* node);
+			Node* getParentOf(Node* startNode, Node* node);
 			Node* rootPtr;
 		};
 	}

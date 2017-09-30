@@ -10,6 +10,7 @@ int bstCheck() {
 	IntegerTree t(tree, sizeof(tree) / sizeof(int), [](int newValue, int nodeValue) -> bool { return (newValue <= nodeValue) ? true : false; });
 
 	t.removeInBst(t.getRoot(), 5);
+	t.removeInBst(t.getRoot(), 4);
 	
 	cout << "Pre" << endl;
 	t.traverse(PRE, [](Node* n) { cout << n->value << endl; });
@@ -18,7 +19,16 @@ int bstCheck() {
 	cout << "Post" << endl;
 	t.traverse(POST, [](Node* n) { cout << n->value << endl; });
 
-	t.removeInBst(t.getRoot(), 4);
+	t.removeInBst(t.getRoot(), 2);
+	cout << "Pre" << endl;
+	t.traverse(PRE, [](Node* n) { cout << n->value << endl; });
+	cout << "In" << endl;
+	t.traverse(IN, [](Node* n) { cout << n->value << endl; });
+	cout << "Post" << endl;
+	t.traverse(POST, [](Node* n) { cout << n->value << endl; });
+
+
+	t.removeInBst(t.getRoot(), 1);
 
 	cout << "Pre" << endl;
 	t.traverse(PRE, [](Node* n) { cout << n->value << endl; });

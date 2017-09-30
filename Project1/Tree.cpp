@@ -48,25 +48,21 @@ Node * utility::tree::IntegerTree::getNextToSwap(Node * node)
 	return NULL;
 }
 
-Node * utility::tree::IntegerTree::getParentOf(Node * node)
+Node * utility::tree::IntegerTree::getParentOf(Node* startNode, Node * node)
 {
-	Node* nextNode = rootPtr;
-	int value = node->value;
-	Node* parentNode = NULL;
+	Node* nextNode = startNode;
 
-	while (nextNode) {
-		if (nextNode->value == value) return parentNode;
-		else {
-			parentNode = nextNode;
-			if (nextNode->value >= value) {
-				nextNode = nextNode->left;
-			}
-			else {
-				nextNode = nextNode->right;
-			}
-		}
-	}
-	return parentNode;
+	if (startNode == NULL) return NULL;
+	if (startNode == node) return NULL;
+
+	if (nextNode->left == node) return nextNode;
+	else if (nextNode->right == node) return nextNode;
+
+	nextNode = getParentOf(nextNode->left, node);
+	if (nextNode != NULL) return nextNode;
+	nextNode = nextNode->right;
+	nextNode = getParentOf(nextNode->right, nextNode);
+	return nextNode;
 }
 
 void utility::tree::IntegerTree::preVisit(Node * node, void(*funcPtr)(Node *))
@@ -168,7 +164,6 @@ Node * utility::tree::IntegerTree::insertInBst(int value, bool (*leftAddPredicat
 void utility::tree::IntegerTree::removeInBst(Node *startNode, int value)
 {
 	Node* node;
-
 	if (!startNode) return;
 
 	node = findInBst(startNode, value);
@@ -183,9 +178,8 @@ void utility::tree::IntegerTree::removeInBst(Node *startNode, int value)
 	if (node->left != NULL && node->right != NULL) {
 		// if all left or right
 		Node *toSwap = getNextToSwap(node);
-
 		// case of three: no child, only one child, two child
-		if (!toSwap) {
+		if (toSwap) {
 			int tmp = node->value;
 			node->value = toSwap->value;
 			toSwap->value = tmp;
@@ -194,7 +188,7 @@ void utility::tree::IntegerTree::removeInBst(Node *startNode, int value)
 	}
 	else if (node->left != NULL) {
   		// parent of this node should set null
-		Node *parent = getParentOf(node);
+		Node *parent = getParentOf(rootPtr, node);
 		if (!parent) {
 			rootPtr = node->left;
 			delete node; // leaf node case
@@ -207,7 +201,7 @@ void utility::tree::IntegerTree::removeInBst(Node *startNode, int value)
 	}
 	else if (node->right != NULL) {
 		// parent of this node should set null
-		Node *parent = getParentOf(node);
+		Node *parent = getParentOf(rootPtr, node);
 		if (!parent) {
 			rootPtr = node->right;
 			delete node; // leaf node case
@@ -219,8 +213,8 @@ void utility::tree::IntegerTree::removeInBst(Node *startNode, int value)
 		}
 	}
 	else {
-		Node *parent = getParentOf(node);
-
+		Node *parent = getParentOf(rootPtr, node);
+		cout << parent->value << endl;
 		if (!parent) {
 			rootPtr = NULL; // set root null
 			delete node; // leaf node case
