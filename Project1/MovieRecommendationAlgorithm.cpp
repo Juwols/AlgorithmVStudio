@@ -1,0 +1,3 @@
+// [NF]
+// https://www.glassdoor.com/Interview/Netflix-Interview-Questions-E11891_P6.htm?filter.jobTitleFTS=software
+// Design a movie recommendation algorithm when based on a social graph. Input given are social graph, what movies are seen by different people, their rating of each movie and overall rating of each movie. Then there were questions on how will weights be selected among friends' movies 

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice">
+      <UniqueIdentifier>{037018f4-93ab-41c9-8b38-bb30510867f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\medium">
+      <UniqueIdentifier>{16451728-91d7-42d8-a6bd-d3845ee1e0c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\designPattern">
+      <UniqueIdentifier>{677d2abb-ce83-4bde-bf5d-a043973df5d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\systemDesign">
+      <UniqueIdentifier>{704de589-bd2a-4c4d-9eec-16a304f73143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\dynamicProgramming">
+      <UniqueIdentifier>{10f37f62-e7f9-4b7a-b2c6-b4c825df45c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\palindrome">
+      <UniqueIdentifier>{62ca72a5-ea34-4ab2-adc6-96ca6f3aa0d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\string">
+      <UniqueIdentifier>{6a493534-e83c-4d88-8de5-6aadbb19c315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\utility">
+      <UniqueIdentifier>{740071b3-1fee-4f14-860b-df75ceec3239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\sort">
+      <UniqueIdentifier>{65fdb183-b9f9-4112-b3ac-d13f3425a5bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\other">
+      <UniqueIdentifier>{5f4a5a66-23e2-4d5e-9f69-06d80ac7d46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\tree">
+      <UniqueIdentifier>{e7627d31-46b5-4f65-9705-49b64abebe5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Hash.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Bits.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="LRUCache.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Unicode.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="BitBlit.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Memcpy.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Crawler.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamingVideoApp.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualMemoryAllocator.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="BigIntegerCalculator.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemDesign.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageDecode.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumer.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="DistributedSystemLoadBalancing.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="PhoneKeyMapper.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerMessagingShortest.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="OnScreenKeypad.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="CppCheatSheet.cpp">
+      <Filter>소스 파일\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="fibonacci_like.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="YourMostChallenging.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="MovieRecommendationAlgorithm.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="SemaphoreImplementation.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="mergeSort.cpp">
+      <Filter>소스 파일\algorithmPractice\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="EnterNBAWhatWillHappen.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="A program to check if a binary tree is BST or not.cpp">
+      <Filter>소스 파일\algorithmPractice\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="1G1M.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="DNSDesign.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="narray-tree-traversal.cpp">
+      <Filter>소스 파일\algorithmPractice\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="GargabeCollectionSystem.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="singletonPatternVsStatic.cpp">
+      <Filter>소스 파일\designPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpSession.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementingCachingProxyServer.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="DifferenceBetweenHashcingAndEncryption.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="HowPingWorks.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="bethandbeyond.cpp">
+      <Filter>소스 파일\algorithmPractice\string</Filter>
+    </ClCompile>
+    <ClCompile Include="atoi.cpp">
+      <Filter>소스 파일\algorithmPractice\string</Filter>
+    </ClCompile>
+    <ClCompile Include="pascaltriangleimplementation.cpp">
+      <Filter>소스 파일\algorithmPractice\other</Filter>
+    </ClCompile>
+    <ClCompile Include="avltree.cpp">
+      <Filter>소스 파일\algorithmPractice\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPvsUDP.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tree.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
