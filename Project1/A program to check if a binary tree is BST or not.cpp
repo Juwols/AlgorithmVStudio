@@ -26,8 +26,7 @@ int bstCheck() {
 	t.traverse(IN, [](Node* n) { cout << n->value << endl; });
 	cout << "Post" << endl;
 	t.traverse(POST, [](Node* n) { cout << n->value << endl; });
-
-
+	
 	t.removeInBst(t.getRoot(), 1);
 
 	cout << "Pre" << endl;

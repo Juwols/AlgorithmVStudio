@@ -1,11 +1,9 @@
 #include <iostream>
+#include "Main.h"
 
 using namespace std;
 
-extern int bstCheck(); // 1.
-
 int main() {
-	//cout << "Hello" << endl;
 	bstCheck();
 	return 0;
 }
