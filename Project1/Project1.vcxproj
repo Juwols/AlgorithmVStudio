@@ -119,12 +119,15 @@
   <ItemGroup>
     <ClCompile Include="1G1M.cpp" />
     <ClCompile Include="A program to check if a binary tree is BST or not.cpp" />
+    <ClCompile Include="array.cpp" />
     <ClCompile Include="atoi.cpp" />
     <ClCompile Include="avltree.cpp" />
     <ClCompile Include="bethandbeyond.cpp" />
     <ClCompile Include="BigIntegerCalculator.cpp" />
     <ClCompile Include="BitBlit.cpp" />
     <ClCompile Include="Bits.cpp" />
+    <ClCompile Include="bit_test.cpp" />
+    <ClCompile Include="cast.cpp" />
     <ClCompile Include="ChainOfResponsibilityPattern.cpp" />
     <ClCompile Include="cine-mach.cpp" />
     <ClCompile Include="classDefinition.cpp" />
@@ -136,8 +139,11 @@
     <ClCompile Include="DNSDesign.cpp" />
     <ClCompile Include="EnterNBAWhatWillHappen.cpp" />
     <ClCompile Include="exceptionHandling.cpp" />
+    <ClCompile Include="factoryPattern.cpp" />
     <ClCompile Include="fibonacci_like.cpp" />
+    <ClCompile Include="file.cpp" />
     <ClCompile Include="FileSystemDesign.cpp" />
+    <ClCompile Include="friend.cpp" />
     <ClCompile Include="GargabeCollectionSystem.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Hash.cpp" />
@@ -147,6 +153,7 @@
     <ClCompile Include="ImplementingCachingProxyServer.cpp" />
     <ClCompile Include="iteratorPattern.cpp" />
     <ClCompile Include="iteratorPatternTest.cpp" />
+    <ClCompile Include="lambda.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="narray-tree-traversal.cpp" />
@@ -163,6 +170,10 @@
     <ClCompile Include="ServerMessagingShortest.cpp" />
     <ClCompile Include="ServiceComponentArchitecture.cpp" />
     <ClCompile Include="singletonPatternVsStatic.cpp" />
+    <ClCompile Include="std_list.cpp" />
+    <ClCompile Include="std_map.cpp" />
+    <ClCompile Include="std_queue.cpp" />
+    <ClCompile Include="std_vector.cpp" />
     <ClCompile Include="StreamingVideoApp.cpp" />
     <ClCompile Include="stringstream.cpp" />
     <ClCompile Include="TCPvsUDP.cpp" />
@@ -170,10 +181,12 @@
     <ClCompile Include="templateClassDefinition.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Unicode.cpp" />
+    <ClCompile Include="unique_ptr_advanced.cpp" />
     <ClCompile Include="VirtualMemoryAllocator.cpp" />
     <ClCompile Include="YourMostChallenging.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BitOperation.h" />
     <ClInclude Include="classDeclaration.h" />
     <ClInclude Include="IEnumerable.h" />
     <ClInclude Include="iteratorPattern.h" />

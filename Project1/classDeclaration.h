@@ -3,16 +3,16 @@
 
 using namespace std;
 
-class Simple {
+class ClassDefinition {
 public:
-	Simple();
-	virtual ~Simple(); // memo_201710: virtual only to class declaration
+	ClassDefinition();
+	virtual ~ClassDefinition(); // memo_201710: virtual only to class declaration
 	virtual void publicMethod(); // VTable is table for class methods and VPtr is pointing on VTable of class hierarchy of the class
-	Simple& operator=(const Simple& rhs);
+	ClassDefinition& operator=(const ClassDefinition& rhs);
 	static const int mConstantInt = 2; // revisit
 	static int sStaticInt;
 protected:
 	int mProtectedInteger;
 private:
-	Simple(const Simple&src);
+	ClassDefinition(const ClassDefinition&src);
 };

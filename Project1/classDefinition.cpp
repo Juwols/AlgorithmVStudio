@@ -1,17 +1,17 @@
 #include "classDeclaration.h"
 
-Simple::Simple() {
+ClassDefinition::ClassDefinition() {
 	cout << "Const Simiple" << endl;
 }
 
-Simple::~Simple() {
+ClassDefinition::~ClassDefinition() {
 	cout << "Destroy Simple" << endl;
 }
 
-void Simple::publicMethod() {
+void ClassDefinition::publicMethod() {
 	cout << "Public method" << endl;
 }
 
-Simple& Simple::operator=(const Simple& rhs) {
+ClassDefinition& ClassDefinition::operator=(const ClassDefinition& rhs) {
 	return *this; // revisit: = should return *this
 }
