@@ -122,6 +122,7 @@
     <ClCompile Include="array.cpp" />
     <ClCompile Include="atoi.cpp" />
     <ClCompile Include="avltree.cpp" />
+    <ClCompile Include="bathandbeyond.cpp" />
     <ClCompile Include="bethandbeyond.cpp" />
     <ClCompile Include="BigIntegerCalculator.cpp" />
     <ClCompile Include="BitBlit.cpp" />
@@ -140,9 +141,13 @@
     <ClCompile Include="EnterNBAWhatWillHappen.cpp" />
     <ClCompile Include="exceptionHandling.cpp" />
     <ClCompile Include="factoryPattern.cpp" />
+    <ClCompile Include="fibonacci.cpp" />
     <ClCompile Include="fibonacci_like.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="FileSystemDesign.cpp" />
+    <ClCompile Include="findIslandOf1.cpp" />
+    <ClCompile Include="findLargestSubBSTTree.cpp" />
+    <ClCompile Include="findWater.cpp" />
     <ClCompile Include="friend.cpp" />
     <ClCompile Include="GargabeCollectionSystem.cpp" />
     <ClCompile Include="Graph.cpp" />
@@ -154,9 +159,18 @@
     <ClCompile Include="iteratorPattern.cpp" />
     <ClCompile Include="iteratorPatternTest.cpp" />
     <ClCompile Include="lambda.cpp" />
+    <ClCompile Include="leaveAbsentCheck.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="longestIncreasingSubsequence.cpp" />
+    <ClCompile Include="longestIncreasingSubsequence_nlogn.cpp" />
+    <ClCompile Include="longestPalindrome.cpp" />
+    <ClCompile Include="longestPalindromeNlogn.cpp" />
+    <ClCompile Include="longestSubstring.cpp" />
+    <ClCompile Include="minEffortToMakePalindrome.cpp" />
+    <ClCompile Include="minpath.cpp" />
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="narray-tree-traversal.cpp" />
+    <ClCompile Include="npuzzle.cpp" />
     <ClCompile Include="pascaltriangleimplementation.cpp" />
     <ClCompile Include="SemaphoreImplementation.cpp" />
     <ClCompile Include="LRUCache.cpp" />
@@ -170,6 +184,7 @@
     <ClCompile Include="ServerMessagingShortest.cpp" />
     <ClCompile Include="ServiceComponentArchitecture.cpp" />
     <ClCompile Include="singletonPatternVsStatic.cpp" />
+    <ClCompile Include="SmartPointer.cpp" />
     <ClCompile Include="std_list.cpp" />
     <ClCompile Include="std_map.cpp" />
     <ClCompile Include="std_queue.cpp" />
@@ -179,6 +194,7 @@
     <ClCompile Include="TCPvsUDP.cpp" />
     <ClCompile Include="template.cpp" />
     <ClCompile Include="templateClassDefinition.cpp" />
+    <ClCompile Include="travelingSalesman.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Unicode.cpp" />
     <ClCompile Include="unique_ptr_advanced.cpp" />
@@ -187,13 +203,35 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BitOperation.h" />
+    <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="classDeclaration.h" />
+    <ClInclude Include="DoubleLinkedList.h" />
+    <ClInclude Include="Hash.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="IEnumerable.h" />
     <ClInclude Include="iteratorPattern.h" />
     <ClInclude Include="iteratorPatternTest.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="node.h" />
+    <ClInclude Include="travelingSalesman.h" />
     <ClInclude Include="Tree.h" />
+    <ClInclude Include="Trie.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="algorithm.txt" />
+    <Text Include="boot.txt" />
+    <Text Include="ddr_to_double_up.txt" />
+    <Text Include="how_bitmaps_save.txt" />
+    <Text Include="how_cpu_add.txt" />
+    <Text Include="how_cpu_moves_data.txt" />
+    <Text Include="how_cpu_works.txt" />
+    <Text Include="how_file_compression_works.txt" />
+    <Text Include="how_flash_works.txt" />
+    <Text Include="how_hdd_works.txt" />
+    <Text Include="how_key_press_works.txt" />
+    <Text Include="linuxSystem.txt" />
+    <Text Include="transistor.txt" />
+    <Text Include="writing_to_ram.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
