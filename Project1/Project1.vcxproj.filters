@@ -46,6 +46,30 @@
     <Filter Include="소스 파일\algorithmPractice\tree">
       <UniqueIdentifier>{e7627d31-46b5-4f65-9705-49b64abebe5c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\systemArchitecture">
+      <UniqueIdentifier>{953a4a2a-2e13-4836-8ff8-3b967add4e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\industryAlgorithm">
+      <UniqueIdentifier>{eaf83ec0-298a-4e7f-87b9-5a243b2108e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\theory">
+      <UniqueIdentifier>{59b777a9-3363-4aba-8d43-c86f467aa89c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\graph">
+      <UniqueIdentifier>{f8d0cf10-5fb6-48d5-a470-d68d5a5aa022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\cppCheatSheet">
+      <UniqueIdentifier>{54015436-42ea-4bbb-bcd7-13266377d814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\designPattern\iterator">
+      <UniqueIdentifier>{160c84ca-d981-4905-a7b9-163b13752620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\backTracking">
+      <UniqueIdentifier>{404164c7-d2e3-473c-862d-d104e84d575a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\puzzle">
+      <UniqueIdentifier>{334156e6-e64a-4835-b1e5-e1d703bc0655}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -183,10 +207,210 @@
     <ClCompile Include="TCPvsUDP.cpp">
       <Filter>소스 파일\systemDesign</Filter>
     </ClCompile>
+    <ClCompile Include="commandPattern.cpp">
+      <Filter>소스 파일\designPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainOfResponsibilityPattern.cpp">
+      <Filter>소스 파일\designPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceComponentArchitecture.cpp">
+      <Filter>소스 파일\systemArchitecture</Filter>
+    </ClCompile>
+    <ClCompile Include="cine-mach.cpp">
+      <Filter>소스 파일\industryAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="exceptionHandling.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="classDefinition.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="templateClassDefinition.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="stringstream.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="iteratorPattern.cpp">
+      <Filter>소스 파일\designPattern\iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="iteratorPatternTest.cpp">
+      <Filter>소스 파일\designPattern\iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="std_list.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="std_map.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="std_vector.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="std_queue.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="array.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="cast.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="friend.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="unique_ptr_advanced.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="factoryPattern.cpp">
+      <Filter>소스 파일\designPattern</Filter>
+    </ClCompile>
+    <ClCompile Include="bit_test.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="fibonacci.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="minpath.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="longestIncreasingSubsequence.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="longestIncreasingSubsequence_nlogn.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="bathandbeyond.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="leaveAbsentCheck.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="travelingSalesman.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="longestPalindrome.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="minEffortToMakePalindrome.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="longestSubstring.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="longestPalindromeNlogn.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="npuzzle.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartPointer.cpp">
+      <Filter>소스 파일\systemDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="findLargestSubBSTTree.cpp">
+      <Filter>소스 파일\algorithmPractice\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="findIslandOf1.cpp">
+      <Filter>소스 파일\algorithmPractice\backTracking</Filter>
+    </ClCompile>
+    <ClCompile Include="findWater.cpp">
+      <Filter>소스 파일\algorithmPractice\puzzle</Filter>
+    </ClCompile>
+    <ClCompile Include="huffmanCoding.cpp">
+      <Filter>소스 파일\algorithmPractice\tree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="classDeclaration.h">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="iteratorPattern.h">
+      <Filter>소스 파일\designPattern\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="node.h">
+      <Filter>소스 파일\designPattern\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="iteratorPatternTest.h">
+      <Filter>소스 파일\designPattern\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="IEnumerable.h">
+      <Filter>소스 파일\designPattern\iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="BitOperation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleLinkedList.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularQueue.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Trie.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="travelingSalesman.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="boot.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="ddr_to_double_up.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_bitmaps_save.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_cpu_add.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_cpu_moves_data.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_cpu_works.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_file_compression_works.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_flash_works.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_hdd_works.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="how_key_press_works.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="transistor.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="writing_to_ram.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="linuxSystem.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="algorithm.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>

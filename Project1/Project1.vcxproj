@@ -155,6 +155,7 @@
     <ClCompile Include="Heap.cpp" />
     <ClCompile Include="HowPingWorks.cpp" />
     <ClCompile Include="HttpSession.cpp" />
+    <ClCompile Include="huffmanCoding.cpp" />
     <ClCompile Include="ImplementingCachingProxyServer.cpp" />
     <ClCompile Include="iteratorPattern.cpp" />
     <ClCompile Include="iteratorPatternTest.cpp" />
