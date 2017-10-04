@@ -5,6 +5,8 @@ int main() {
 	//atoiTest();
 	//singletonTest();
 	//keyPadLetterTest();
-	fibonacciTest();
+	//fibonacciTest();
+	//pascalTriangleTest();
+	decodeTest();
 	return 0;
 }

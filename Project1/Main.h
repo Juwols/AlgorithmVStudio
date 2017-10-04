@@ -6,3 +6,5 @@ extern int atoiTest();
 extern int singletonTest();
 extern int keyPadLetterTest();
 extern int fibonacciTest();
+extern int pascalTriangleTest();
+extern int decodeTest();
