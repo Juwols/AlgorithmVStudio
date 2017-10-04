@@ -151,7 +151,7 @@ static  void traverse(Node *root, string str) {
 	else {
 		traverse(tmp->left, str + "0");
 		traverse(tmp->right, str + "1");
-		if (tmp->left == NULL && tmp->right == NULL) cout << "[leaf] value: " << tmp->value << ", char: " << tmp->a << ", code:" << str << endl;
+//		if (tmp->left == NULL && tmp->right == NULL) cout << "[leaf] value: " << tmp->value << ", char: " << tmp->a << ", code:" << str << endl;
 	}
 }
 

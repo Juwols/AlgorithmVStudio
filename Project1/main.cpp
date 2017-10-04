@@ -1,9 +1,10 @@
 #include <iostream>
 #include "Main.h"
 
-using namespace std;
-
 int main() {
-	bstCheck();
+	//atoiTest();
+	//singletonTest();
+	//keyPadLetterTest();
+	fibonacciTest();
 	return 0;
 }
