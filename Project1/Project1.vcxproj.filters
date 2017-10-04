@@ -144,9 +144,6 @@
     <ClCompile Include="CppCheatSheet.cpp">
       <Filter>소스 파일\utility</Filter>
     </ClCompile>
-    <ClCompile Include="fibonacci_like.cpp">
-      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
-    </ClCompile>
     <ClCompile Include="YourMostChallenging.cpp">
       <Filter>소스 파일\systemDesign</Filter>
     </ClCompile>
@@ -197,9 +194,6 @@
     </ClCompile>
     <ClCompile Include="atoi.cpp">
       <Filter>소스 파일\algorithmPractice\string</Filter>
-    </ClCompile>
-    <ClCompile Include="pascaltriangleimplementation.cpp">
-      <Filter>소스 파일\algorithmPractice\other</Filter>
     </ClCompile>
     <ClCompile Include="avltree.cpp">
       <Filter>소스 파일\algorithmPractice\tree</Filter>
@@ -323,6 +317,12 @@
     </ClCompile>
     <ClCompile Include="huffmanCoding.cpp">
       <Filter>소스 파일\algorithmPractice\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="pascalTriangle.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="decodeNumberToLetters.cpp">
+      <Filter>소스 파일\algorithmPractice\dynamicProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

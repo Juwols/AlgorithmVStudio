@@ -135,6 +135,7 @@
     <ClCompile Include="commandPattern.cpp" />
     <ClCompile Include="CppCheatSheet.cpp" />
     <ClCompile Include="Crawler.cpp" />
+    <ClCompile Include="decodeNumberToLetters.cpp" />
     <ClCompile Include="DifferenceBetweenHashcingAndEncryption.cpp" />
     <ClCompile Include="DistributedSystemLoadBalancing.cpp" />
     <ClCompile Include="DNSDesign.cpp" />
@@ -142,7 +143,6 @@
     <ClCompile Include="exceptionHandling.cpp" />
     <ClCompile Include="factoryPattern.cpp" />
     <ClCompile Include="fibonacci.cpp" />
-    <ClCompile Include="fibonacci_like.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="FileSystemDesign.cpp" />
     <ClCompile Include="findIslandOf1.cpp" />
@@ -172,7 +172,7 @@
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="narray-tree-traversal.cpp" />
     <ClCompile Include="npuzzle.cpp" />
-    <ClCompile Include="pascaltriangleimplementation.cpp" />
+    <ClCompile Include="pascalTriangle.cpp" />
     <ClCompile Include="SemaphoreImplementation.cpp" />
     <ClCompile Include="LRUCache.cpp" />
     <ClCompile Include="main.cpp" />
