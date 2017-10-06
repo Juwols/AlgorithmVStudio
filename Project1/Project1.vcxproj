@@ -172,6 +172,7 @@
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="narray-tree-traversal.cpp" />
     <ClCompile Include="npuzzle.cpp" />
+    <ClCompile Include="overridding_const_dest.cpp" />
     <ClCompile Include="pascalTriangle.cpp" />
     <ClCompile Include="SemaphoreImplementation.cpp" />
     <ClCompile Include="LRUCache.cpp" />

@@ -1,3 +1,4 @@
+// [AM][G][NF]
 #include <iostream>
 #include <memory.h>
 #include <mutex>
@@ -5,12 +6,12 @@
 using namespace std;
 
 template <typename T>
-class SmartPointer {
+class smart_shared_ptr {
 public:
 	T *ref;
 	unsigned int  *ref_count;
 
-	SmartPointer(T* ptr) {
+	smart_shared_ptr(T* ptr) {
 		ref = ptr;
 		ref_count = (unsigned int*)malloc(sizeof(unsigned int));
 		m = new mutex;
@@ -20,7 +21,7 @@ public:
 		cout << "Init ref count to " << *ref_count << endl;
 	}
 
-	SmartPointer(SmartPointer<T> &sptr) {
+	smart_shared_ptr(smart_shared_ptr<T> &sptr) {
 		ref = sptr.ref;
 		ref_count = sptr.ref_count; // when move, new smart pointer should share pointer to ref_count , not value;
 		m = sptr.m;
@@ -30,11 +31,11 @@ public:
 		cout << "now ref count is " << *ref_count << endl;
 	}
 
-	virtual ~SmartPointer() {
+	virtual ~smart_shared_ptr() {
 		remove();
 	}
 
-	SmartPointer<T> & operator=(SmartPointer<T> & sptr) {
+	smart_shared_ptr<T> & operator=(smart_shared_ptr<T> & sptr) {
 		if (this == &sptr) return *this;
 		if (*ref_count > 0) remove();
 		ref = sptr.ref;
@@ -74,7 +75,6 @@ protected:
 		else {
 			cout << "ref count is non-zero :" << *ref_count << endl;
 		}
-		ul.unlock();
 	}
 };
 
@@ -89,12 +89,12 @@ int smartPointerTest() {
 	st->a = 7;
 	st->b = 7000;
 
-	SmartPointer<struct St> sss(st);
+	smart_shared_ptr<struct St> sss(st);
 	cout << "SSS->b:" << sss->b << endl;
 
 	*i = 1000;
-	SmartPointer<unsigned int> def(i);
-	SmartPointer<unsigned int> abc(def);
+	smart_shared_ptr<unsigned int> def(i);
+	smart_shared_ptr<unsigned int> abc(def);
 	cout << "print abc: " << *abc << endl;
 	return 0;
 }

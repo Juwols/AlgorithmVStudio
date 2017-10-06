@@ -7,6 +7,9 @@ int main() {
 	//keyPadLetterTest();
 	//fibonacciTest();
 	//pascalTriangleTest();
-	decodeTest();
+	//decodeTest();
+	//testSuperSubVtable();
+	//testCommand();
+	testChainOfResponsibility();
 	return 0;
 }

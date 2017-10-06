@@ -8,3 +8,7 @@ extern int keyPadLetterTest();
 extern int fibonacciTest();
 extern int pascalTriangleTest();
 extern int decodeTest();
+extern int smartPointerTest();
+extern int testSuperSubVtable();
+extern int testCommand();
+extern int testChainOfResponsibility();
