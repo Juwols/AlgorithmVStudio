@@ -133,6 +133,8 @@
     <ClCompile Include="cine-mach.cpp" />
     <ClCompile Include="classDefinition.cpp" />
     <ClCompile Include="commandPattern.cpp" />
+    <ClCompile Include="connection.cpp" />
+    <ClCompile Include="connectionPool.cpp" />
     <ClCompile Include="CppCheatSheet.cpp" />
     <ClCompile Include="Crawler.cpp" />
     <ClCompile Include="decodeNumberToLetters.cpp" />
@@ -141,6 +143,7 @@
     <ClCompile Include="DNSDesign.cpp" />
     <ClCompile Include="EnterNBAWhatWillHappen.cpp" />
     <ClCompile Include="exceptionHandling.cpp" />
+    <ClCompile Include="facadePattern.cpp" />
     <ClCompile Include="factoryPattern.cpp" />
     <ClCompile Include="fibonacci.cpp" />
     <ClCompile Include="file.cpp" />
@@ -167,13 +170,18 @@
     <ClCompile Include="longestPalindrome.cpp" />
     <ClCompile Include="longestPalindromeNlogn.cpp" />
     <ClCompile Include="longestSubstring.cpp" />
+    <ClCompile Include="mediatorPattern.cpp" />
+    <ClCompile Include="mementoPattern.cpp" />
     <ClCompile Include="minEffortToMakePalindrome.cpp" />
     <ClCompile Include="minpath.cpp" />
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="narray-tree-traversal.cpp" />
     <ClCompile Include="npuzzle.cpp" />
+    <ClCompile Include="observerPattern.cpp" />
     <ClCompile Include="overridding_const_dest.cpp" />
     <ClCompile Include="pascalTriangle.cpp" />
+    <ClCompile Include="poolingTest.cpp" />
+    <ClCompile Include="proxyPattern.cpp" />
     <ClCompile Include="SemaphoreImplementation.cpp" />
     <ClCompile Include="LRUCache.cpp" />
     <ClCompile Include="main.cpp" />
@@ -201,12 +209,15 @@
     <ClCompile Include="Unicode.cpp" />
     <ClCompile Include="unique_ptr_advanced.cpp" />
     <ClCompile Include="VirtualMemoryAllocator.cpp" />
+    <ClCompile Include="compositorVisitorPattern.cpp" />
     <ClCompile Include="YourMostChallenging.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BitOperation.h" />
     <ClInclude Include="CircularQueue.h" />
     <ClInclude Include="classDeclaration.h" />
+    <ClInclude Include="connection.h" />
+    <ClInclude Include="connectionPool.h" />
     <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="Hash.h" />
     <ClInclude Include="Heap.h" />
@@ -215,6 +226,8 @@
     <ClInclude Include="iteratorPatternTest.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="node.h" />
+    <ClInclude Include="pool.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="travelingSalesman.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Trie.h" />

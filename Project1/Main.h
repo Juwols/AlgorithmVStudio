@@ -12,3 +12,7 @@ extern int smartPointerTest();
 extern int testSuperSubVtable();
 extern int testCommand();
 extern int testChainOfResponsibility();
+extern int testFacadePat();
+extern int testMediator();
+extern int testPooling();
+extern int testMemento();

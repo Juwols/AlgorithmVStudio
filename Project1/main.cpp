@@ -10,6 +10,9 @@ int main() {
 	//decodeTest();
 	//testSuperSubVtable();
 	//testCommand();
-	testChainOfResponsibility();
+	//testChainOfResponsibility();
+	//testMediator();
+	//testPooling();
+	testMemento();
 	return 0;
 }
