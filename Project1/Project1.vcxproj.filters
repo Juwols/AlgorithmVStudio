@@ -360,6 +360,12 @@
     <ClCompile Include="mementoPattern.cpp">
       <Filter>소스 파일\designPattern</Filter>
     </ClCompile>
+    <ClCompile Include="BitToInteger.cpp">
+      <Filter>소스 파일\cppCheatSheet</Filter>
+    </ClCompile>
+    <ClCompile Include="memopad.cpp">
+      <Filter>소스 파일\industryAlgorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tree.h">

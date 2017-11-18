@@ -173,6 +173,7 @@
     <ClCompile Include="longestSubstring.cpp" />
     <ClCompile Include="mediatorPattern.cpp" />
     <ClCompile Include="mementoPattern.cpp" />
+    <ClCompile Include="memopad.cpp" />
     <ClCompile Include="minEffortToMakePalindrome.cpp" />
     <ClCompile Include="minpath.cpp" />
     <ClCompile Include="mergeSort.cpp" />
