@@ -16,3 +16,5 @@ extern int testFacadePat();
 extern int testMediator();
 extern int testPooling();
 extern int testMemento();
+extern int std_list();
+extern int bitToIntegerTest();

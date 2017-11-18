@@ -13,6 +13,8 @@ int main() {
 	//testChainOfResponsibility();
 	//testMediator();
 	//testPooling();
-	testMemento();
+	//testMemento();
+	//std_list();
+	bitToIntegerTest();
 	return 0;
 }

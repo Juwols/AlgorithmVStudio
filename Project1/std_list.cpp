@@ -32,5 +32,10 @@ int std_list() {
 
 									   //itor2 = accumulate(l.begin(), l.end(),0); // memo-201706 : Need to how to use
 									   //cout << "Accu: " << *itor2 << endl;
+	// memo-20171028: Sort only for vector and dequeue
+	cout << "after sort" << endl;
+	for (int& i : l) {
+		cout << i << endl;
+	}
 	return 0;
 }

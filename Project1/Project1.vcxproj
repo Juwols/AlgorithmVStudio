@@ -127,6 +127,7 @@
     <ClCompile Include="BigIntegerCalculator.cpp" />
     <ClCompile Include="BitBlit.cpp" />
     <ClCompile Include="Bits.cpp" />
+    <ClCompile Include="BitToInteger.cpp" />
     <ClCompile Include="bit_test.cpp" />
     <ClCompile Include="cast.cpp" />
     <ClCompile Include="ChainOfResponsibilityPattern.cpp" />

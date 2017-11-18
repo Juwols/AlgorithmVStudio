@@ -11,7 +11,7 @@ class MyException2 : public runtime_error {
 	}
 };
 
-class MyException : public runtime_error {
+class MyException : public runtime_error { // memo-20171029: difference runtime_error vs. exception
 	// memo_201706: invalid_argument, bad_alloc, bad_cast, out_of_range, overflow_error, underflow_error
 public:
 	MyException(const string& str) : runtime_error(str.c_str()), _str(str) {
