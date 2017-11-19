@@ -197,10 +197,12 @@
     <ClCompile Include="ServiceComponentArchitecture.cpp" />
     <ClCompile Include="singletonPatternVsStatic.cpp" />
     <ClCompile Include="SmartPointer.cpp" />
+    <ClCompile Include="solidPattern.cpp" />
     <ClCompile Include="std_list.cpp" />
     <ClCompile Include="std_map.cpp" />
     <ClCompile Include="std_queue.cpp" />
     <ClCompile Include="std_vector.cpp" />
+    <ClCompile Include="strategyPatternImpl.cpp" />
     <ClCompile Include="StreamingVideoApp.cpp" />
     <ClCompile Include="stringstream.cpp" />
     <ClCompile Include="TCPvsUDP.cpp" />
