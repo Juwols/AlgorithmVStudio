@@ -1,5 +1,9 @@
-// [NF]
-
+/*
+  Encapsulate and separate action with event.
+  Command has just Execute and setReceiver
+  Invoker was set by command and call command.Execute which 
+  subsequently call Receiver's action
+*/
 // advantage: invoker only sees command (command can be any)
 // task can be presented as encapsulated object
 // good when each task is independent and just execute is needed

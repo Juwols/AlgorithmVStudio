@@ -1,6 +1,43 @@
 #include <iostream>
 #include <stack>
 
+/*
+  Originater with state
+  Caretaker who calls actions
+  Memento
+
+  Memento.Add(MementoCustomerEntity);
+
+  execute () {
+    new
+  }
+
+  var cmd = new ChangeCustomerCommand(cust);
+  cmd.Execute(newName);
+  cmd.UnExecute();
+
+  object level keeping by certain point state
+  
+  no matter how many changes of 30 properties, do not care
+
+  private List<MementoForCustomerEntity> _mementos; // not just adding customer
+
+  public void Execute(string newName) {
+    _mementos.Add(new MementosForCustomerEntity(Customer));
+	Customer.Name = newName;
+  }
+
+  public class MementoForCustomerEntity { // memo-20171119: this needed because customer will be just pointer which will change
+    public MementoForCustomerEntity(Customer customer) {
+	  _customer = customer.Clone();
+	}
+
+	public Customer GetCustomer() {
+	  _customer;
+	}
+  }
+*/
+
 using namespace std;
 
 //------------------------------------------------------------------
