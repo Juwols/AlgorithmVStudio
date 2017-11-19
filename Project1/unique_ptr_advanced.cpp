@@ -47,8 +47,11 @@ int uniqueAdvanced() {
 	cout << "custom deleter demo" << endl;
 	ofstream("demo.txt") << 'x';
 	{
+#ifdef __unix__ 
 		unique_ptr<FILE, decltype(&fclose)> fp(std::fopen("demo.txt", "r"), &std::fclose); // TODO: function reference for return
 		if (fp) cout << fgetc(fp.get()) << endl;
+#elif defined(_WIN32) || defined(WIN32)
+#endif
 	}
 
 	cout << "custom lambda-expression delete demo" << endl;
