@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int randomFixedLenStringGenerator(int length, int numOf, char strArray[STRING_MAX_ROW][STRING_MAX_LEN]) {
+int randomFixedLenStringGenerator(int length, int numOf, char strArray[STRING_MAX_ROW][STRING_MAX_LEN], bool unique) {
 	time_t t = time(NULL);
 	srand(t);
 	for (int i = 0; i < numOf; i++) {
@@ -14,8 +14,11 @@ int randomFixedLenStringGenerator(int length, int numOf, char strArray[STRING_MA
 			if (s < 10) { // digrit
 				strArray[i][j] = '0' + s;
 			}
-			else { // 10 ~ 35
-				strArray[i][j] = 'a' + s - 10;
+			else if (s >= 10 && s <= 16) { // :~ @
+				strArray[i][j] = 'a' + s - 10; // do not allow special characters
+			}
+			else { // a ~ z
+				strArray[i][j] = 'a' + s - 17; // s is at least 17
 			}
 		}
 		strArray[i][length] = '\0';
@@ -24,7 +27,7 @@ int randomFixedLenStringGenerator(int length, int numOf, char strArray[STRING_MA
 }
 
 
-int randomVarLenStringGenerator(int minLength, int maxLength, int numOf, char strArray[STRING_MAX_ROW][STRING_MAX_LEN]) {
+int randomVarLenStringGenerator(int minLength, int maxLength, int numOf, char strArray[STRING_MAX_ROW][STRING_MAX_LEN], bool unique) {
 	time_t t = time(NULL);
 	srand(t);
 	int rSize = maxLength - minLength;
@@ -38,8 +41,11 @@ int randomVarLenStringGenerator(int minLength, int maxLength, int numOf, char st
 			if (s < 10) { // digrit
 				strArray[i][j] = '0' + s;
 			}
-			else { // 10 ~ 35
-				strArray[i][j] = 'a' + s - 10;
+			else if (s >= 10 && s <= 16) { // :~ @
+				strArray[i][j] = 'a' + s - 10; // do not allow special characters
+			}
+			else { // a ~ z
+				strArray[i][j] = 'a' + s - 17; // s is at least 17
 			}
 		}
 		strArray[i][rLength] = '\0';
@@ -47,7 +53,8 @@ int randomVarLenStringGenerator(int minLength, int maxLength, int numOf, char st
 	return 0;
 }
 
-int randomIntGenerator(int min, int max, int numOf, int* intArray) {
+
+int randomIntGenerator(int min, int max, int numOf, int* intArray, bool unique) {
 	time_t t = time(NULL);
 	srand(t);
 
