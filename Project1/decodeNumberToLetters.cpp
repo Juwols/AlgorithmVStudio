@@ -3,9 +3,16 @@
 #include <assert.h>
 using namespace std;
 
+/*
+  when given number, 123 => 1, 23 or 1, 2, 3 or 12, 3
+
+  10,12....19,
+  20,2...6
+*/
+
 int gTotal;
 
-void decode(int index, string str, string result) {
+void decode(int index, string str, string result) { 
 	if (index == str.size()) {
 		gTotal++;
 		cout << result << endl;
@@ -16,7 +23,7 @@ void decode(int index, string str, string result) {
 	char c1, c2;
 
 	if (index == (str.size() - 1)) {
-		c1 = 'a' + str[index] - '0' - 1;
+		c1 = 'a' + str[index] - '0' - 1; // 65 + 3
 		decode(index + 1, str, result + c1); // one way
 	}
 	else if (thisNum > 2) {

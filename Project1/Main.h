@@ -18,3 +18,5 @@ extern int testPooling();
 extern int testMemento();
 extern int std_list();
 extern int bitToIntegerTest();
+extern int testCount();
+extern int randomTestMain();

@@ -76,6 +76,15 @@
     <Filter Include="소스 파일\designPattern\scopedLock">
       <UniqueIdentifier>{13e57cd1-f06c-4496-8b9a-8bbc3650bb2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\algorithmPractice\olympia">
+      <UniqueIdentifier>{e32faa12-1b6b-4870-9e1f-a0719f36ae76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\algorithmPractice\ST">
+      <UniqueIdentifier>{508f9f99-72cd-4cff-88d3-2902d9284334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\randomDataGenerator">
+      <UniqueIdentifier>{b1549c94-d307-433e-b6a8-3f492f27cd29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -372,6 +381,15 @@
     <ClCompile Include="solidPattern.cpp">
       <Filter>소스 파일\designPattern</Filter>
     </ClCompile>
+    <ClCompile Include="countFive.cpp">
+      <Filter>소스 파일\algorithmPractice\olympia</Filter>
+    </ClCompile>
+    <ClCompile Include="randomDataGenerator.cpp">
+      <Filter>소스 파일\randomDataGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="randomTestSample.cpp">
+      <Filter>소스 파일\algorithmPractice\ST</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tree.h">
@@ -427,6 +445,9 @@
     </ClInclude>
     <ClInclude Include="connection.h">
       <Filter>소스 파일\designPattern\pooling</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomDataGenerator.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

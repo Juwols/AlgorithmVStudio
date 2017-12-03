@@ -133,9 +133,11 @@
     <ClCompile Include="ChainOfResponsibilityPattern.cpp" />
     <ClCompile Include="cine-mach.cpp" />
     <ClCompile Include="classDefinition.cpp" />
+    <ClCompile Include="randomDataGenerator.cpp" />
     <ClCompile Include="commandPattern.cpp" />
     <ClCompile Include="connection.cpp" />
     <ClCompile Include="connectionPool.cpp" />
+    <ClCompile Include="countFive.cpp" />
     <ClCompile Include="CppCheatSheet.cpp" />
     <ClCompile Include="Crawler.cpp" />
     <ClCompile Include="decodeNumberToLetters.cpp" />
@@ -184,6 +186,7 @@
     <ClCompile Include="pascalTriangle.cpp" />
     <ClCompile Include="poolingTest.cpp" />
     <ClCompile Include="proxyPattern.cpp" />
+    <ClCompile Include="randomTestSample.cpp" />
     <ClCompile Include="SemaphoreImplementation.cpp" />
     <ClCompile Include="LRUCache.cpp" />
     <ClCompile Include="main.cpp" />
@@ -231,6 +234,7 @@
     <ClInclude Include="Main.h" />
     <ClInclude Include="node.h" />
     <ClInclude Include="pool.h" />
+    <ClInclude Include="RandomDataGenerator.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="travelingSalesman.h" />
     <ClInclude Include="Tree.h" />

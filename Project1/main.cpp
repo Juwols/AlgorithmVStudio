@@ -15,6 +15,8 @@ int main() {
 	//testPooling();
 	//testMemento();
 	//std_list();
-	bitToIntegerTest();
+	//bitToIntegerTest();
+	//testCount();
+	randomTestMain();
 	return 0;
 }
