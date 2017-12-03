@@ -133,6 +133,7 @@
     <ClCompile Include="ChainOfResponsibilityPattern.cpp" />
     <ClCompile Include="cine-mach.cpp" />
     <ClCompile Include="classDefinition.cpp" />
+    <ClCompile Include="ConnectionManagement.cpp" />
     <ClCompile Include="randomDataGenerator.cpp" />
     <ClCompile Include="commandPattern.cpp" />
     <ClCompile Include="connection.cpp" />

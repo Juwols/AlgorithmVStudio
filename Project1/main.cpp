@@ -17,6 +17,7 @@ int main() {
 	//std_list();
 	//bitToIntegerTest();
 	//testCount();
-	randomTestMain();
+	//randomTestMain();
+	connectionManagementTest();
 	return 0;
 }

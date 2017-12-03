@@ -390,6 +390,9 @@
     <ClCompile Include="randomTestSample.cpp">
       <Filter>소스 파일\algorithmPractice\ST</Filter>
     </ClCompile>
+    <ClCompile Include="ConnectionManagement.cpp">
+      <Filter>소스 파일\algorithmPractice\ST</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tree.h">

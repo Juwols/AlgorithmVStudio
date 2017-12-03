@@ -20,3 +20,4 @@ extern int std_list();
 extern int bitToIntegerTest();
 extern int testCount();
 extern int randomTestMain();
+extern int connectionManagementTest();

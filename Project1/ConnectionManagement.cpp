@@ -8,23 +8,23 @@ static char gPasswd[STRING_MAX_ROW][STRING_MAX_LEN];
 static int  gAction[INT_MAX_SIZE];
 static int  gCar[INT_MAX_SIZE];
 
-#define ID_LEN 10
-#define ID_NUM 5
+#define ID_MIN_LEN 5
+#define ID_MAX_LEN 10
+#define ID_NUM 20
 
 #define PASSWD_LEN 20
 #define PASSWD_NUM 3
 
 #define ACTION_MIN 1000
 #define ACTION_MAX 6000
-#define ACTION_NUM 30
+#define ACTION_NUM 5
 
 #define CAR_MIN 2010
 #define CAR_MAX 2018
-#define CAR_NUM 10
+#define CAR_NUM 3
 
-
-int randomTestMain() {
-	randomFixedLenStringGenerator(ID_LEN, ID_NUM, gId);
+int connectionManagementTest() {
+	randomVarLenStringGenerator(ID_MIN_LEN, ID_MAX_LEN, ID_NUM, gId);
 
 	for (int i = 0; i < ID_NUM; i++)
 		cout << gId[i] << endl;
@@ -32,7 +32,7 @@ int randomTestMain() {
 	cout << "Next string generation...." << endl;
 
 	randomFixedLenStringGenerator(PASSWD_LEN, PASSWD_NUM, gPasswd);
-	
+
 	for (int i = 0; i < PASSWD_NUM; i++)
 		cout << gPasswd[i] << endl;
 
