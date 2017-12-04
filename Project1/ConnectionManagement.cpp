@@ -6,6 +6,8 @@ using namespace std;
 static char gId[STRING_MAX_ROW][STRING_MAX_LEN];
 static char gPasswd[STRING_MAX_ROW][STRING_MAX_LEN];
 static int gDefaultTime[INT_MAX_SIZE];
+static int gCurrentTime[INT_MAX_SIZE];
+static int gIsLogout[INT_MAX_SIZE];
 
 #define ID_MIN_LEN 5
 #define ID_MAX_LEN 10
@@ -56,8 +58,11 @@ int connectionManagementTest() {
 		passwdOffset = randomVarLenStringGenerator(PASSWD_MIN_LEN, PASSWD_MAX_LEN, 10000, gPasswd, false, passwdOffset+1);
 		defaultTimeOffset = randomIntGenerator(DEFAULT_MIN_TIME, DEFAULT_MAX_TIME, 10000, gDefaultTime, false, defaultTimeOffset + 1);
 
-		// TODO: fill your account by yourself for 10000 account
 		for (int k = 0; k <= idOffset; k++) {
+			gIsLogout[k] = false; // set logout true
+			gCurrentTime[k] = gDefaultTime[k]; // set current time to default time
+
+ 		    // TODO: fill your account by yourself for 10000 account
 			doNewAccount(gId[k], gPasswd[k], gDefaultTime[k]);
 		}
 
@@ -69,6 +74,9 @@ int connectionManagementTest() {
 				passwdOffset = randomVarLenStringGenerator(PASSWD_MIN_LEN, PASSWD_MAX_LEN, 1, gPasswd, false, passwdOffset + 1);
 				defaultTimeOffset = randomIntGenerator(DEFAULT_MIN_TIME, DEFAULT_MAX_TIME, 1, gDefaultTime, false, defaultTimeOffset + 1);
 
+				gIsLogout[idOffset] = false; // set logout true
+				gCurrentTime[idOffset] = gDefaultTime[idOffset]; // set current time to default time
+
 				// TODO: fill your account by yourself for one account
 				doNewAccount(gId[idOffset], gPasswd[passwdOffset], gDefaultTime[defaultTimeOffset]);
 			}
@@ -76,16 +84,26 @@ int connectionManagementTest() {
 				// select ID and passwd (sometimes wrong)
 				int index = randomIntSelector(0, idOffset);
 
-				// TODO: handle connect request
-				if (time(NULL) % 2)
+				if (time(NULL) % 2) {
+					// set as default time if connected
+					if (gIsLogout[index] == false) {
+						gCurrentTime[index] = gDefaultTime[index];
+					}
+
+					// TODO: handle connect request
 					doConnect(gId[index], gPasswd[index]);
-				else
+				}
+				else {
+					// TODO: handle connect request
 					doConnect(gId[index], gId[index]);
+				}
 			}
 			else if (tmp == LOG_OUT) {
 				//log out this user. if no user exists for the id, ignore
 				// select ID and logout
 				int index = randomIntSelector(0, idOffset);
+				if (gIsLogout[index] == false)
+					gIsLogout[index] = true;
 
 				// TODO: handle logout
 				doLogout(gId[index]);
