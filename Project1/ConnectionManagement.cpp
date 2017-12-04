@@ -1,6 +1,7 @@
 #include <iostream>
 #include "RandomDataGenerator.h"
 #include <time.h>
+
 using namespace std;
 
 static char gId[STRING_MAX_ROW][STRING_MAX_LEN];
@@ -109,6 +110,15 @@ int connectionManagementTest() {
 				doLogout(gId[index]);
 			}
 			else { // tmp is Tick
+				for (int y = 0; y <= idOffset; y++) {
+					if (gIsLogout[y] == false) {
+						gCurrentTime[y]--;
+
+						if (gCurrentTime[y] <= 0) {
+							gIsLogout[y] = true;
+						}
+					}
+				}
 				//reduce all remaining time by 1
 				doTick();
 			}
@@ -117,6 +127,7 @@ int connectionManagementTest() {
 	}
 	return 0;
 }
+
 //	randomVarLenStringGenerator(ID_MIN_LEN, ID_MAX_LEN, ID_NUM, gId, true);
 //
 //	for (int i = 0; i < ID_NUM; i++)
