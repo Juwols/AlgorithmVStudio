@@ -254,6 +254,7 @@
     <Text Include="how_hdd_works.txt" />
     <Text Include="how_key_press_works.txt" />
     <Text Include="linuxSystem.txt" />
+    <Text Include="output.txt" />
     <Text Include="transistor.txt" />
     <Text Include="writing_to_ram.txt" />
   </ItemGroup>
