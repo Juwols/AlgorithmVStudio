@@ -1,6 +1,7 @@
 #include <iostream>
 #include "RandomDataGenerator.h"
 #include <time.h>
+#include <list>
 
 using namespace std;
 
@@ -30,21 +31,78 @@ enum Actions {
 	TICK
 };
 
+// my code
+typedef struct _Node {
+	char id[12];
+	char password[12];
+	int defaultTime;
+	int currentTime;
+	bool isLogout;
+} Node;
+
+list<Node> gList;
+// end of my code
+
+void doInit() {
+	// do init here
+}
+
 void doNewAccount(char* id, char* passwd, int default) {
-	cout << "[NEW] " << id << ":" << passwd << ":" << default << endl;
+	//cout << "[NEW] " << id << ":" << passwd << ":" << default << endl;
+	Node n;
+	strcpy_s(n.id, id);
+	strcpy_s(n.password, passwd);
+	n.defaultTime = default;
+	n.currentTime = default;
+	n.isLogout = false;
+
+	gList.push_back(n);
 }
 
 void doConnect(char* id, char* passwd) {
-	cout << "[Connect] " << id << ":" << passwd << endl;
+	list<Node>::iterator itor = gList.begin();
+
+	for (itor; itor != gList.end(); itor++) {
+		if (strcmp(itor->id, id) == 0 &&
+			strcmp(itor->password, passwd) == 0 && 
+			itor->isLogout == false) {
+			itor->currentTime = itor->defaultTime;
+		}
+	}
+	//cout << "[Connect] " << id << ":" << passwd << endl;
 }
 
 void doLogout(char* id) {
-	cout << "[Logout] " << id << endl;
+	list<Node>::iterator itor = gList.begin();
+
+	for (itor; itor != gList.end(); itor++) {
+		if (strcmp(itor->id, id) == 0 &&
+			itor->isLogout == false) {
+			itor->isLogout = true;
+			itor->currentTime = 0;
+		}
+	}
+	//cout << "[Logout] " << id << endl;
 }
 
 int doTick() {
-	cout << "[Tick] " << endl;
-	return 0;
+	list<Node>::iterator itor = gList.begin();
+	int count = 0;
+	for (itor; itor != gList.end(); itor++) {
+		if (itor->isLogout == false) {
+			if (itor->currentTime > 0) {
+				itor->currentTime = itor->currentTime - 1;
+
+				if (itor->currentTime == 0) {
+					itor->isLogout = true;
+					//cout << "[my] " << itor->id << " log out " << endl;
+					count++;
+				}
+			}
+		}
+	}
+
+	return count;
 }
 
 int connectionManagementTest() {
@@ -53,7 +111,7 @@ int connectionManagementTest() {
 	int defaultTimeOffset = -1;
 
 	randomInit();
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 1; i++) {
 		// generate ID 10000¹ø
 		idOffset = randomVarLenStringGenerator(ID_MIN_LEN, ID_MAX_LEN, 10000, gId, true, idOffset+1);
 		passwdOffset = randomVarLenStringGenerator(PASSWD_MIN_LEN, PASSWD_MAX_LEN, 10000, gPasswd, false, passwdOffset+1);
@@ -67,7 +125,7 @@ int connectionManagementTest() {
 			doNewAccount(gId[k], gPasswd[k], gDefaultTime[k]);
 		}
 
-		for (int j = 0; j < 10000; j++) {
+		for (int j = 0; j < 1000; j++) {
 			int tmp = rand() % 4;
 
 			if (tmp == NEW_ACCOUNT) {
@@ -103,52 +161,53 @@ int connectionManagementTest() {
 				//log out this user. if no user exists for the id, ignore
 				// select ID and logout
 				int index = randomIntSelector(0, idOffset);
-				if (gIsLogout[index] == false)
+				if (gIsLogout[index] == false) {
 					gIsLogout[index] = true;
+					gCurrentTime[index] = 0;
+				}
 
 				// TODO: handle logout
 				doLogout(gId[index]);
 			}
 			else { // tmp is Tick
+				int testerCount = 0;
 				for (int y = 0; y <= idOffset; y++) {
 					if (gIsLogout[y] == false) {
 						gCurrentTime[y]--;
 
-						if (gCurrentTime[y] <= 0) {
+						if (gCurrentTime[y] == 0) {
 							gIsLogout[y] = true;
+							testerCount++;
+							//cout << "[test] " << y << " is out" << endl;
 						}
 					}
 				}
 				//reduce all remaining time by 1
-				doTick();
+				int myAnswer = doTick();
+				if (myAnswer != testerCount) {
+					cout << "[Tick] test failed !!!! " << endl;
+					return 1;
+				}
 			}
 		}
 		// random(all) + tick 10000¹ø
+
+		list<Node>::iterator itorFinal = gList.begin();
+		for (int x = 0; x <= idOffset; x++) {
+			if ((strcmp(itorFinal->id, gId[x]) == 0) &&
+				(strcmp(itorFinal->password, gPasswd[x]) == 0) &&
+				itorFinal->isLogout == gIsLogout[x] &&
+				itorFinal->currentTime == gCurrentTime[x] &&
+				itorFinal->defaultTime == gDefaultTime[x]) {
+
+			}
+			else {
+				cout << x << " of " << idOffset << ": wrong !!!! test failed !!!! " << endl;
+				return 1;
+			}
+			itorFinal++;
+		}
+		cout << "Test success !!!! " << endl;
 	}
 	return 0;
 }
-
-//	randomVarLenStringGenerator(ID_MIN_LEN, ID_MAX_LEN, ID_NUM, gId, true);
-//
-//	for (int i = 0; i < ID_NUM; i++)
-//		cout << gId[i] << endl;
-//
-//	cout << "Next string generation...." << endl;
-//
-//	randomFixedLenStringGenerator(PASSWD_LEN, PASSWD_NUM, gPasswd, true);
-//
-//	for (int i = 0; i < PASSWD_NUM; i++)
-//		cout << gPasswd[i] << endl;
-//
-//	randomIntGenerator(ACTION_MIN, ACTION_MAX, ACTION_NUM, gAction, true);
-//
-//	for (int i = 0; i < ACTION_NUM; i++)
-//		cout << gAction[i] << endl;
-//
-//	randomIntGenerator(CAR_MIN, CAR_MAX, CAR_NUM, gCar, true);
-//
-//	for (int i = 0; i < CAR_NUM; i++)
-//		cout << gCar[i] << endl;
-//
-//	return 0;
-//}
