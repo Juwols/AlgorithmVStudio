@@ -24,29 +24,27 @@ static int  gCar[INT_MAX_SIZE];
 #define CAR_NUM 3
 
 int connectionManagementTest() {
-	randomVarLenStringGenerator(ID_MIN_LEN, ID_MAX_LEN, ID_NUM, gId);
+	randomVarLenStringGenerator(ID_MIN_LEN, ID_MAX_LEN, ID_NUM, gId, true);
 
 	for (int i = 0; i < ID_NUM; i++)
 		cout << gId[i] << endl;
 
 	cout << "Next string generation...." << endl;
 
-	randomFixedLenStringGenerator(PASSWD_LEN, PASSWD_NUM, gPasswd);
+	randomFixedLenStringGenerator(PASSWD_LEN, PASSWD_NUM, gPasswd, true);
 
 	for (int i = 0; i < PASSWD_NUM; i++)
 		cout << gPasswd[i] << endl;
 
-	randomIntGenerator(ACTION_MIN, ACTION_MAX, ACTION_NUM, gAction);
+	randomIntGenerator(ACTION_MIN, ACTION_MAX, ACTION_NUM, gAction, true);
 
 	for (int i = 0; i < ACTION_NUM; i++)
 		cout << gAction[i] << endl;
 
-
-	randomIntGenerator(CAR_MIN, CAR_MAX, CAR_NUM, gCar);
+	randomIntGenerator(CAR_MIN, CAR_MAX, CAR_NUM, gCar, true);
 
 	for (int i = 0; i < CAR_NUM; i++)
 		cout << gCar[i] << endl;
-
 
 	return 0;
 }

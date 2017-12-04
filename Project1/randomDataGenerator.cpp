@@ -1,5 +1,7 @@
 #include <iostream>
 #include <time.h>
+#include <sstream>
+
 #include "RandomDataGenerator.h"
 
 using namespace std;
@@ -22,6 +24,17 @@ int randomFixedLenStringGenerator(int length, int numOf, char strArray[STRING_MA
 			}
 		}
 		strArray[i][length] = '\0';
+		// update string with unique header
+        if (unique) {
+			stringstream ss;
+			ss << i << "@";
+			for (int k = 0; k < ss.str().size(); k++) {
+				strArray[i][k] = ss.str().at(k);
+			}
+			if (length < ss.str().size()) {
+				strArray[i][ss.str().size()] = '\0';
+			}
+		}
 	}
 	return 0;
 }
@@ -49,10 +62,21 @@ int randomVarLenStringGenerator(int minLength, int maxLength, int numOf, char st
 			}
 		}
 		strArray[i][rLength] = '\0';
+
+		// update string with unique header
+		if (unique) {
+			stringstream ss;
+			ss << i << "@";
+			for (int k = 0; k < ss.str().size(); k++) {
+				strArray[i][k] = ss.str().at(k);
+			}
+			if (rLength < ss.str().size()) {
+				strArray[i][ss.str().size()] = '\0';
+			}
+		}
 	}
 	return 0;
 }
-
 
 int randomIntGenerator(int min, int max, int numOf, int* intArray, bool unique) {
 	time_t t = time(NULL);
@@ -60,15 +84,20 @@ int randomIntGenerator(int min, int max, int numOf, int* intArray, bool unique) 
 
 	int minFromZero = min;
 	int maxFromZero = max - min;
-
-	for (int i = 0; i < numOf; i++) {
-		int temp = rand();
-		// if value is more than maxFromZero, then
-		int rValue = temp % (maxFromZero + 1);
-		rValue += minFromZero;
-		intArray[i] = rValue;
+	if (unique) {
+		for (int i = 0; i < numOf; i++) {
+			intArray[i] = min + i;
+		}
 	}
-
+	else {
+		for (int i = 0; i < numOf; i++) {
+			int temp = rand();
+			// if value is more than maxFromZero, then
+			int rValue = temp % (maxFromZero + 1);
+			rValue += minFromZero;
+			intArray[i] = rValue;
+		}
+	}
 	return 0;
 }
 
